@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page de contact</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        .coordonnes{
+            width: 18%;
+            height: 60vh;
+            background-color: rgba(0, 0, 0, 0.466);
+            box-shadow: 3px 2px 12px 4px rgba(58, 58, 58, 0.603);
+            margin-left: 0px;
+            margin-top: 10px;
+            padding: 2vh;
+            font-size: small;
+            font-weight: bold;
+            line-height: 2;
+        }
+        .formulaire1{
+            width: 40%;
+            margin: 0 auto;
+            background-color: rgba(73, 51, 51, 0.623);
+            box-shadow: 3px 2px 12px 4px rgba(58, 58, 58, 0.603);
+            padding: 6vh;
+            font-weight: 600;
+            font-size: larger;
+            line-height: 1.5;
+            margin-top: 50px;
+        }
+        input,textarea{ 
+            background-color: rgba(241, 241, 207, 0.699);
+            border: outset 2px rgba(0, 0, 0, 0.842);
+            color: rgba(0, 0, 0, 0.63);
+            font-weight: bold;
+            padding: 3px;
+            transition: all 0.3s;
+        }
+        input:hover,textarea:hover{
+            border: inset 2px rgba(0, 0, 0, 0.842);
+            background-color: rgba(202, 202, 170, 0.699);
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <section class="menu">
+        <a href="#modal1" class="open-modal">Menu</a>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <nav class="nav">
+                    <ul>
+                        <li> <a href="index.html">Acceuil</a></li>
+                        <li><a href="presentation.html">A propos de moi</a></li>
+                        <li><a href="parcours.html">Mon parcours académique</a></li>
+                        <li><a href="competances.html">Mes competances informatique</a></li>
+                        <li><a href="qualités.html">Mes qualités</a></li>
+                        <li><a href="certificats.html">Mes certificats et attestations</a></li>
+                        <li><a href="contact.html" style="margin-right: 0%;">Contactez-moi</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        </section>
+        <p>Contactez-moi</p>
+    </header>
+    <main>
+        <div class="header2">
+            <h1>Formulaire de contact</h1>
+        </div>
+        <p style="font-size: large; font-weight: bold;">Merci pour votre visite dans mon portfolio. Veillez remplir ce formulaire si vous desirez me laisser un message.</p>
+       <section class="formulaire1">
+            <form>
+                <label for="name">Nom:</label>
+                <input type="text" placeholder="Entrez votre nom"><br><br>
+                <label for="prenom">Prenom:</label>
+                <input type="text" placeholder="Entrez votre prenom"><br><br>
+                <label for="Mail">Votre address mail:</label>
+                <input type="email" placeholder="Entrez votre adress mail"><br><br>
+                <label for="message">Message:</label>
+                <textarea placeholder="Ecrivez votre message ici" style="vertical-align: middle;height: fit-content;"></textarea><br><br>
+                <input type="submit" value="Envoyer" style="float: right;">
+            </form>
+       </section>
+      </main>
+  <br><br><br>
+  <hr>
+  <footer>
+    <p>&copy;FATIME TCHALLOU MOUHYDDINE  |  Etudiante en génie informatique</p>
+    <p>Email: <a href="mailto: fatimemouhyddine@gmail.com" style="all: unset; color: rgba(151, 166, 199, 0.678);">fatimemouhyddine@gmail.com</a></p>
+  </footer>
+</body>
+</html>

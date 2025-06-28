@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes qualités</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        .qualités ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin: 20px;
+        }
+        img{
+            background-color: rgba(204, 193, 181, 0.801);
+            height: 30vh;
+            width: 30vh;
+            position: relative;
+            border-radius: 40px;
+            box-shadow: 3px 2px 12px 4px rgba(0, 0, 0, 0.24);
+            margin: 15px;
+            border: outset 3px rgba(14, 13, 13, 0.637);
+            transition: all 0.3s;
+        }
+        img:hover{
+            border: inset 3px rgba(14, 13, 13, 0.637);
+            width: 31vh;
+        }
+        .qualités li{ list-style: none;}
+       
+        figcaption {
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .qualités{
+            border: ridge 3px rgba(209, 202, 202, 0.692);
+            border-radius: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section class="menu">
+            <a href="#modal1" class="open-modal">Menu</a>
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close">&times;</a>
+                    <nav class="nav">
+                        <ul>
+                            <li> <a href="index.html">Acceuil</a></li>
+                            <li><a href="presentation.html">A propos de moi</a></li>
+                            <li><a href="parcours.html">Mon parcours académique</a></li>
+                            <li><a href="competances.html">Mes competances informatique</a></li>
+                            <li><a href="qualités.html">Mes qualités</a></li>
+                            <li><a href="certificats.html">Mes certificats et attestations</a></li>
+                            <li><a href="contact.html" style="margin-right: 0%;">Contactez-moi</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <p>Mes qualités</p>
+    </header>
+    <main>
+        <div class="header2">
+            <h1>Explorons mes differentes qualités</h1>
+        </div>
+        <br>
+        <br>
+        <section class="qualités">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="photo curieuse.jpg" alt="curiosité">
+                        <figcaption>Curiosité</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="photo ambitieuse.jpg" alt="ambition">
+                        <figcaption>ambition</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="photo courageuse.jpg" alt="courage">
+                        <figcaption>courage</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <figure>
+                        <img src="photo esprit critique.jpg" alt="esprit critique">
+                        <figcaption>esprit critique</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="photo jeune.jpg" alt="jeunesse">
+                        <figcaption>jeunesse</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <br><br><br>
+    <hr>
+    <footer>
+        <p>&copy;FATIME TCHALLOU MOUHYDDINE | Etudiante en génie informatique</p>
+        <p>Email: <a href="mailto: fatimemouhyddine@gmail.com"
+                style="all: unset; color: rgba(151, 166, 199, 0.678);">fatimemouhyddine@gmail.com</a></p>
+    </footer>
+</body>
+
+</html>
