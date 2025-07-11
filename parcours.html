@@ -7,18 +7,23 @@
     <title>parcours academique</title>
     <link rel="stylesheet" href="portfolio.css">
     <style>
-        .school{
+        .school {
             border: ridge 3px rgba(209, 202, 202, 0.692);
             border-radius: 20px;
-            width: 80%;
+            width: fit-content;
             margin: 0 auto;
             padding: 15px;
         }
-        main p{
-            font-size: clamp(10px,3vw,20px);
+
+        main p,h4 {
+            font-size: clamp(10px, 5vw, 20px);
         }
-        .paragraphe{
+
+        .paragraphe {
             height: 130px;
+        }
+        .paragraphe p{
+            font-size: clamp(5px, 2vw, 20px);
         }
         .modal2 {
             display: none;
@@ -34,6 +39,7 @@
         .modal2:target {
             display: flex;
         }
+
         .school ul {
             display: flex;
             justify-content: space-around;
@@ -42,7 +48,7 @@
         }
 
         .school li {
-            background-color: rgba(204, 193, 181, 0.801);
+      background-color: rgba(245, 222, 222, 0.5);
             list-style: none;
             height: 175px;
             width: 26vh;
@@ -57,11 +63,13 @@
             border: outset 3px rgba(31, 29, 29, 0.541);
             transition: all 0.3s;
         }
-        .school li:hover{
+
+        .school li:hover {
             border: inset 3px rgba(31, 29, 29, 0.541);
             width: 27vh;
             background-color: rgba(175, 167, 159, 0.801);
         }
+
         .open-modal2 {
             background-color: rgba(63, 58, 58, 0.644);
             color: rgba(231, 231, 220, 0.747);
@@ -69,54 +77,124 @@
             padding-bottom: 2px;
             box-shadow: 3px 2px 12px 4px rgba(22, 22, 22, 0.055);
             border-radius: 8px;
-            transition: all 1s;
+            transition: all 0.1s;
             height: 15px;
-            font-size: clamp(5px,2vw,10px);
+            font-size: clamp(5px, 2vw, 10px);
             width: min-content;
             position: relative;
             margin-right: 0px;
             float: right;
+         } 
+
+        .open-modal2:hover {
+            background-color: rgba(46, 45, 45, 0.548);
+            border: inset 2px rgba(0, 0, 0, 0.911);
+            height: 16px;
         }
 
-        .school a:hover {
-            background-color: rgba(46, 45, 45, 0.548);
-            width: 81px;
-            border: inset 2px rgba(0, 0, 0, 0.911);
-        }
-        h4{
+        h4 {
             text-transform: uppercase;
-            font-size: x-large;
+            margin-bottom: 15px;
         }
-        .modal-content p{ 
+
+        .modal-content p {
             line-height: 1.5;
             font-size: large;
         }
+
+        @media screen and (max-width:560px) {
+             .paragraphe {
+            height: 30px;
+        }
+            .school ul {
+                padding: 2px;
+                width: 100%;
+            }
+
+            .school li {
+                height: 10vh;
+                width: 22%;
+                padding: 5px;
+                margin: 5px;
+                border-radius: 10px;
+            }
+
+            .paragraphe p {
+                display: none;
+            }
+            .open-modal2{ height: 7px; font-size: clamp(2px, 1vw, 5px);padding-top: 0px;}
+            .open-modal2:hover{height: 8px;}
+            .paragraphe h3{ font-size: x-small;}
+            .school li:hover {
+                border: inset 3px rgba(31, 29, 29, 0.541);
+                width: 23%;
+                background-color: rgba(175, 167, 159, 0.801);
+            }
+        }
+         @media screen and (max-width:960px) and (min-width:560px){
+                .school ul {
+                padding: 2px;
+                width: 100%;
+            }
+             .open-modal2:hover{height: 8px;}
+            .school li {
+                height: 18vh;
+                width: 30%;
+                padding: 5px;
+                margin: 5px;
+                border-radius: 10px;
+            }
+            .school li:hover {
+                border: inset 3px rgba(31, 29, 29, 0.541);
+                width: 31%;
+                background-color: rgba(175, 167, 159, 0.801);
+            }
+            .open-modal2{ height: 7px; font-size: clamp(2px, 1vw, 5px);padding-top: 0px;}
+            
+        .paragraphe {
+            height: 90px;
+        }
+        .paragraphe h3{ font-size: small; margin-bottom: 10px;}
+         }
     </style>
 </head>
 
 <body>
     <header>
-        <section class="menu">
-            <a href="#modal1" class="open-modal">Menu</a>
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">&times;</a>
-                    <nav class="nav">
-                        <ul>
-                            <li> <a href="index.html">Acceuil</a></li>
-                            <li><a href="presentation.html">A propos de moi</a></li>
-                            <li><a href="parcours.html">Mon parcours académique</a></li>
-                            <li><a href="competances.html">Mes competances informatique</a></li>
-                            <li><a href="qualités.html">Mes qualités</a></li>
-                            <li><a href="certificats.html">Mes certificats et attestations</a></li>
-                            <li><a href="contact.html" style="margin-right: 0%;">Contactez-moi</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </section>
-        <p> Mon parcours académique</p>
-    </header>
+    <section class="menu">
+      <a href="#modal1" class="open-modal">menu</a>
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <a href="#" class="close">&times;</a>
+            <nav class="nav">
+              <ul>
+                <li> <a href="index.html">Acceuil</a></li>
+                <li><a href="presentation.html">A propos de moi</a></li>
+                <li><a href="parcours.html">Mon parcours académique</a></li>
+                <li><a href="competances.html">Mes competances informatique</a></li>
+                <li><a href="qualités.html">Mes qualités</a></li>
+                <li><a href="certificats.html">Mes certificats et attestations</a></li>
+                <li><a href="contact.html" style="margin-right: 0%;">Contactez-moi</a></li>
+              </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <p>
+      Mon parcours académique
+    </p>
+    <section class="navbar">
+         <ul>
+                <li> <a href="index.html">Acceuil</a></li>
+                <li><a href="presentation.html">A propos de moi</a></li>
+                <li><a href="parcours.html">Mon parcours académique</a></li>
+                <li><a href="competances.html">Mes competances informatique</a></li>
+                <li><a href="qualités.html">Mes qualités</a></li>
+                <li><a href="certificats.html">Mes certificats et attestations</a></li>
+                <li><a href="contact.html" style="margin-right: 0%;">Contactez-moi</a></li>
+           </ul>
+    </section>
+  </header>
     <main>
         <div class="header2">
             <h1>OU-EST CE QUE J'AI FREQUENTé?</h1>
@@ -128,15 +206,18 @@
                 <li>
                     <section class="cbs">
                         <div class="paragraphe">
-                        <h3>2024-aujourd'hui</h3>
-                        <p>CEFOD business School</p>
+                            <h3>2024-aujourd'hui</h3>
+                            <p>CEFOD business School</p>
                         </div>
                         <a href="#modal11" class="open-modal2">Description</a>
                         <div id="modal11" class="modal2">
                             <div class="modal-content">
                                 <a href="#" class="close">&times;</a>
                                 <h4>CEFOD business School</h4>
-                                <p>Depuis octobre 2024, a commencé mon parcours au CEFOD BUSINESS school en génie informmatique graçe à un test d'entré que j'ai validé. j'envisage y fréquenter pendant 3 ans afin d'obtenir ma licence et continuer ailleur avec la spécialité. </p>
+                                <p>Depuis octobre 2024, a commencé mon parcours au CEFOD BUSINESS school en génie
+                                    informmatique graçe à un test d'entré que j'ai validé. j'envisage y fréquenter
+                                    pendant 3 ans afin d'obtenir ma licence et continuer ailleur avec la spécialité.
+                                </p>
                             </div>
                         </div>
                     </section>
@@ -144,15 +225,23 @@
                 <li>
                     <section class="faucons">
                         <div class="paragraphe">
-                        <h3>2020-2024</h3>
-                        <p>Lycée les faucons</p>
+                            <h3>2020-2024</h3>
+                            <p>Lycée les faucons</p>
                         </div>
                         <a href="#modal2" class="open-modal2">Description</a>
                         <div id="modal2" class="modal2">
                             <div class="modal-content">
                                 <a href="#" class="close">&times;</a>
                                 <h4>Lycée les faucons</h4>
-                                <p>J'ai été au lycée les faucons pour 4ans. De la classe de troisieme jusqu'en terminal. Un parcours assez riche ou comme d'habitude j'etais parmis les meilleurs.Ayant déjà composé le bef, alors pendant les vacances de 3ème, j'ai profité pour preparer mon entrée au lycée. Ceci m'a permis d'acquerir une base assez solide pour affronter cette nouvelle étape. Arrivé à la fin de la classe de premire scientifique, j'ai été orientée en terminal C et j'y suis allée bien que nous soyons que deux filles dans la salle. Un choix que je regretterais jamais. Mon parcours dans ce lycée se termine par l'obtention de mon bac C avec la mention assez-bien et avec 3ans de moins que la normale donc à 15ans. </p>
+                                <p>J'ai été au lycée les faucons pour 4ans. De la classe de troisieme jusqu'en terminal.
+                                    Un parcours assez riche ou comme d'habitude j'etais parmis les meilleurs.Ayant déjà
+                                    composé le bef, alors pendant les vacances de 3ème, j'ai profité pour preparer mon
+                                    entrée au lycée. Ceci m'a permis d'acquerir une base assez solide pour affronter
+                                    cette nouvelle étape. Arrivé à la fin de la classe de premire scientifique, j'ai été
+                                    orientée en terminal C et j'y suis allée bien que nous soyons que deux filles dans
+                                    la salle. Un choix que je regretterais jamais. Mon parcours dans ce lycée se termine
+                                    par l'obtention de mon bac C avec la mention assez-bien et avec 3ans de moins que la
+                                    normale donc à 15ans. </p>
                             </div>
                         </div>
                     </section>
@@ -160,15 +249,19 @@
                 <li>
                     <section class="reussite">
                         <div class="paragraphe">
-                        <h3>2019-2020</h3>
-                        <p>Collège De La Reussite</p>
+                            <h3>2019-2020</h3>
+                            <p>Collège De La Reussite</p>
                         </div>
                         <a href="#modal3" class="open-modal2">Description</a>
                         <div id="modal3" class="modal2">
                             <div class="modal-content">
                                 <a href="#" class="close">&times;</a>
                                 <h4>Collège De La Reussite</h4>
-                                <p>Je suis entrée en classe de 4ème dans ce collège n'ayant pas fait la classe precedante et avec 3ans de difference avec les autres. Vers le deuxieme trimestre, j'ai été jugée capable de composer le Brevet d'Enseignement Fondamental, BEF que je devrais normalement composer en classe de 3ème. Donc j'ai été candidate libre et je l'ai obtenue. Oui, J'ai obtenue mon BEF, mon premier diplôme à 11 ans. </p>
+                                <p>Je suis entrée en classe de 4ème dans ce collège n'ayant pas fait la classe
+                                    precedante et avec 3ans de difference avec les autres. Vers le deuxieme trimestre,
+                                    j'ai été jugée capable de composer le Brevet d'Enseignement Fondamental, BEF que je
+                                    devrais normalement composer en classe de 3ème. Donc j'ai été candidate libre et je
+                                    l'ai obtenue. Oui, J'ai obtenue mon BEF, mon premier diplôme à 11 ans. </p>
                             </div>
                         </div>
                     </section>
@@ -176,15 +269,23 @@
                 <li>
                     <section class="nh">
                         <div class="paragraphe">
-                        <h3>2017-2019</h3>
-                        <p>Collège les Nouveaux Horizons</p>
+                            <h3>2017-2019</h3>
+                            <p>Collège les Nouveaux Horizons</p>
                         </div>
                         <a href="#modal4" class="open-modal2">Description</a>
                         <div id="modal4" class="modal2">
                             <div class="modal-content">
                                 <a href="#" class="close">&times;</a>
                                 <h4>Collège les Nouveaux Horizons</h4>
-                                <p>Oui, je suis revenue dans mon ancien établissement. J'y suis inscrite cette fois ci en classe de CM2 en depassant d'une classe mes camarades avec qui j'avais frequenté au depart dans cet établissement. Et en ayant 2ans de moins que mes condisciples.J'y ai frequenté pendant 2ans. j'ai fait la classe de CM2 et ma première année du collège, la 6ème.Etant toujours la meilleure de ma salle avec des moyennes élévées, il a été decidé pour la 3ème fois maintenant que je saute la classe suivante, la classe de 5ème. Après un travail intensif pendant les vacances, j'étais assez prête pour passer en classe de 4èeme avec cette fois ci 3ans de moins que mes condisciples.</p>
+                                <p>Oui, je suis revenue dans mon ancien établissement. J'y suis inscrite cette fois ci
+                                    en classe de CM2 en depassant d'une classe mes camarades avec qui j'avais frequenté
+                                    au depart dans cet établissement. Et en ayant 2ans de moins que mes condisciples.J'y
+                                    ai frequenté pendant 2ans. j'ai fait la classe de CM2 et ma première année du
+                                    collège, la 6ème.Etant toujours la meilleure de ma salle avec des moyennes élévées,
+                                    il a été decidé pour la 3ème fois maintenant que je saute la classe suivante, la
+                                    classe de 5ème. Après un travail intensif pendant les vacances, j'étais assez prête
+                                    pour passer en classe de 4èeme avec cette fois ci 3ans de moins que mes
+                                    condisciples.</p>
                             </div>
                         </div>
                     </section>
@@ -195,31 +296,37 @@
                 <li>
                     <section class="espoir">
                         <div class="paragraphe">
-                        <h3>2016-2017</h3>
-                        <p>Ecole Espoir</p>
+                            <h3>2016-2017</h3>
+                            <p>Ecole Espoir</p>
                         </div>
                         <a href="#modal5" class="open-modal2">Description</a>
                         <div id="modal5" class="modal2">
                             <div class="modal-content">
                                 <a href="#" class="close">&times;</a>
                                 <h4>Ecole Espoir</h4>
-                                <p>Danc cette école, je n'ai fait qu'une classe, la classe de CE2. J'ai encore été jugée assez eveillée pour mon niveau et par rapport aux élèves de ma classe. Donc il a également été proposé que je saute la classe suivante qui est celle de CM1. Et pour cela il a fallu que je change d'établissement.Donc j'irais en classe de CM2 dans un autre etablissement mais cette fois-ci avec 2ans de moins que mes condisciples.</p>
+                                <p>Danc cette école, je n'ai fait qu'une classe, la classe de CE2. J'ai encore été jugée
+                                    assez eveillée pour mon niveau et par rapport aux élèves de ma classe. Donc il a
+                                    également été proposé que je saute la classe suivante qui est celle de CM1. Et pour
+                                    cela il a fallu que je change d'établissement.Donc j'irais en classe de CM2 dans un
+                                    autre etablissement mais cette fois-ci avec 2ans de moins que mes condisciples.</p>
                             </div>
                         </div>
                     </section>
                 </li>
                 <li>
                     <section class="nh">
-                         <div class="paragraphe">
-                        <h3>2014-2016</h3>
-                        <p>Ecole primaire Les Nouveaux Horizons</p>
+                        <div class="paragraphe">
+                            <h3>2014-2016</h3>
+                            <p>Ecole primaire Les Nouveaux Horizons</p>
                         </div>
                         <a href="#modal6" class="open-modal2">Description</a>
                         <div id="modal6" class="modal2">
                             <div class="modal-content">
                                 <a href="#" class="close">&times;</a>
                                 <h4>Ecole primaire Les Nouveaux Horizons</h4>
-                                <p>J'entre aux Nouveaux Horizons en classe de CP2 avec 1ans de moins que les autres. J'y ai fait 2ans: CP2 et CE1. Apres ces deux classes j'ai du changer d'école pour continuer avec la classe de CE2.</p>
+                                <p>J'entre aux Nouveaux Horizons en classe de CP2 avec 1ans de moins que les autres. J'y
+                                    ai fait 2ans: CP2 et CE1. Apres ces deux classes j'ai du changer d'école pour
+                                    continuer avec la classe de CE2.</p>
                             </div>
                         </div>
                     </section>
@@ -227,15 +334,25 @@
                 <li>
                     <section class="scl">
                         <div class="paragraphe">
-                        <h3>2011-2014</h3>
-                        <p>Jardin d'enfants Saint Charle Lwanga</p>
+                            <h3>2011-2014</h3>
+                            <p>Jardin d'enfants Saint Charle Lwanga</p>
                         </div>
                         <a href="#modal7" class="open-modal2">Description</a>
                         <div id="modal7" class="modal2">
                             <div class="modal-content">
                                 <a href="#" class="close">&times;</a>
                                 <h4>Jardin d'enfants Saint Charle Lwanga</h4>
-                                <p>C'est ici qu'à commencé mon parcours académique à 3ans. Au jardin d'enfants SAINT CHARLE LWANGA, j'ai fréquenté pendant 3ans, mes années de maternelle à savoir la petite section, la moyenne et la grande section. En sortant de ce jardin d'nfants, j'ai été jugée assez éveillée pour mon niveau donc mon père a decidé que je saute la classe suivante, la premiere classe du primaire qui est CP1. Je passerais ainsi directement au CP2 avec 1ans de moins que mes condisciples. Ceci en préparant serieusement ce passage pendant les vacances.Donc pas de vacances pour moi. Mais ayant en tête que je depasserais d'une salle mes amis, j'était assez motivée et je me donnais à fond. Et c'est ainsi pour chaque classe que je sautais. Certe je les sautais mais je maitrisais d'abord les notions essentielles de cette salle pendant les vacances.</p>
+                                <p>C'est ici qu'à commencé mon parcours académique à 3ans. Au jardin d'enfants SAINT
+                                    CHARLE LWANGA, j'ai fréquenté pendant 3ans, mes années de maternelle à savoir la
+                                    petite section, la moyenne et la grande section. En sortant de ce jardin d'nfants,
+                                    j'ai été jugée assez éveillée pour mon niveau donc mon père a decidé que je saute la
+                                    classe suivante, la premiere classe du primaire qui est CP1. Je passerais ainsi
+                                    directement au CP2 avec 1ans de moins que mes condisciples. Ceci en préparant
+                                    serieusement ce passage pendant les vacances.Donc pas de vacances pour moi. Mais
+                                    ayant en tête que je depasserais d'une salle mes amis, j'était assez motivée et je
+                                    me donnais à fond. Et c'est ainsi pour chaque classe que je sautais. Certe je les
+                                    sautais mais je maitrisais d'abord les notions essentielles de cette salle pendant
+                                    les vacances.</p>
                             </div>
                         </div>
                     </section>
@@ -247,7 +364,8 @@
     <hr>
     <footer>
         <p>&copy;FATIME TCHALLOU MOUHYDDINE | Etudiante en génie informatique</p>
-        <p>Email: <a href="mailto: fatimemouhyddine@gmail.com" style="all: unset; color: rgba(151, 166, 199, 0.678);">fatimemouhyddine@gmail.com</a></p>
+        <p>Email: <a href="mailto: fatimemouhyddine@gmail.com"
+                style="all: unset; color: rgba(151, 166, 199, 0.678);">fatimemouhyddine@gmail.com</a></p>
     </footer>
 </body>
 

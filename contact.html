@@ -19,69 +19,93 @@
             line-height: 2;
         }
         .formulaire1{
-            width: 40%;
+            width: 70%;
             margin: 0 auto;
-            background-color: rgba(73, 51, 51, 0.623);
+      background-color: rgba(245, 222, 222, 0.5);
             box-shadow: 3px 2px 12px 4px rgba(58, 58, 58, 0.603);
             padding: 6vh;
             font-weight: 600;
             font-size: larger;
             line-height: 1.5;
             margin-top: 50px;
+            border: ridge 2px #BDC3C7;
         }
         input,textarea{ 
-            background-color: rgba(241, 241, 207, 0.699);
+            background-color: #FFFFFF;
             border: outset 2px rgba(0, 0, 0, 0.842);
             color: rgba(0, 0, 0, 0.63);
             font-weight: bold;
             padding: 3px;
             transition: all 0.3s;
+            width: 80%;
+            margin: 0 auto;
+            height: 6vh;
         }
         input:hover,textarea:hover{
             border: inset 2px rgba(0, 0, 0, 0.842);
-            background-color: rgba(202, 202, 170, 0.699);
+            background-color: #bdb3b3;
         }
+        @media screen and (max-width:815px) {
+            .formulaire1{ width:90%;padding: 2vh;}
+            
+        input,textarea{ 
+          height:3vh ;
+          font-size: x-small;
+        }}
     </style>
 </head>
 <body>
      <header>
-        <section class="menu">
-        <a href="#modal1" class="open-modal">Menu</a>
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <a href="#" class="close">&times;</a>
-                <nav class="nav">
-                    <ul>
-                        <li> <a href="index.html">Acceuil</a></li>
-                        <li><a href="presentation.html">A propos de moi</a></li>
-                        <li><a href="parcours.html">Mon parcours académique</a></li>
-                        <li><a href="competances.html">Mes competances informatique</a></li>
-                        <li><a href="qualités.html">Mes qualités</a></li>
-                        <li><a href="certificats.html">Mes certificats et attestations</a></li>
-                        <li><a href="contact.html" style="margin-right: 0%;">Contactez-moi</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <section class="menu">
+      <a href="#modal1" class="open-modal">menu</a>
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <a href="#" class="close">&times;</a>
+            <nav class="nav">
+              <ul>
+                <li> <a href="index.html">Acceuil</a></li>
+                <li><a href="presentation.html">A propos de moi</a></li>
+                <li><a href="parcours.html">Mon parcours académique</a></li>
+                <li><a href="competances.html">Mes competances informatique</a></li>
+                <li><a href="qualités.html">Mes qualités</a></li>
+                <li><a href="certificats.html">Mes certificats et attestations</a></li>
+                <li><a href="contact.html" style="margin-right: 0%;">Contactez-moi</a></li>
+              </ul>
+          </nav>
         </div>
-        </section>
-        <p>Contactez-moi</p>
-    </header>
+      </div>
+    </section>
+    <p>
+      Page de contact
+    </p>
+    <section class="navbar">
+         <ul>
+                <li> <a href="index.html">Acceuil</a></li>
+                <li><a href="presentation.html">A propos de moi</a></li>
+                <li><a href="parcours.html">Mon parcours académique</a></li>
+                <li><a href="competances.html">Mes competances informatique</a></li>
+                <li><a href="qualités.html">Mes qualités</a></li>
+                <li><a href="certificats.html">Mes certificats et attestations</a></li>
+                <li><a href="contact.html" style="margin-right: 0%;">Contactez-moi</a></li>
+           </ul>
+    </section>
+  </header>
     <main>
         <div class="header2">
             <h1>Formulaire de contact</h1>
         </div>
         <p style="font-size: large; font-weight: bold;">Merci pour votre visite dans mon portfolio. Veillez remplir ce formulaire si vous desirez me laisser un message.</p>
        <section class="formulaire1">
-            <form>
-                <label for="name">Nom:</label>
-                <input type="text" placeholder="Entrez votre nom"><br><br>
-                <label for="prenom">Prenom:</label>
-                <input type="text" placeholder="Entrez votre prenom"><br><br>
-                <label for="Mail">Votre address mail:</label>
-                <input type="email" placeholder="Entrez votre adress mail"><br><br>
-                <label for="message">Message:</label>
-                <textarea placeholder="Ecrivez votre message ici" style="vertical-align: middle;height: fit-content;"></textarea><br><br>
-                <input type="submit" value="Envoyer" style="float: right;">
+            <form action="https://formsubmit.co/fatimemouhyddine@gmail.com" method="POST" >
+                <label for="name"></label>
+                <input type="text" name="Nom" placeholder="Entrez votre nom" required><br><br>
+                <label for="prenom"></label>
+                <input type="text" name="Prenom" placeholder="Entrez votre prenom"><br><br>
+                <label for="Mail"></label>
+                <input type="email" name="Adresse mail" placeholder="Entrez votre adress mail" required><br><br>
+                <label for="message"></label>
+                <textarea name="message" placeholder="Ecrivez votre message ici" style="height: 10vh;" required></textarea><br><br>
+                <input type="submit" value="Envoyer" style="float: right; width: 15%; margin-top: -2vh;height: 4vh;">
             </form>
        </section>
       </main>

@@ -47,13 +47,14 @@
             margin-bottom: 8vh;
             background-color: transparent;
             border: ridge 4px rgba(12, 12, 12, 0.082);
-            width: 30%;
-            height: 50px;
+            width: min-content;
+            height: min-content;
             margin: 0 auto;
             padding: 15px;
             text-transform: uppercase;
             margin-bottom: 30px;
             margin-top: 10vh;
+            font-size: clamp(10px, 1vw, 25px);
         }
 
         main p {
@@ -89,10 +90,12 @@
             border: outset 3px rgba(31, 29, 29, 0.541);
             transition: all 0.1s;
         }
-        .connaissance ul li:hover{
+
+        .connaissance ul li:hover {
             border: inset 3px rgba(31, 29, 29, 0.541);
             width: 26vh;
         }
+
         .open-modal2 {
             background-color: rgba(63, 58, 58, 0.644);
             color: rgba(231, 231, 220, 0.747);
@@ -126,13 +129,48 @@
             overflow-y: auto;
             margin-top: 25vh;
         }
+
+        .connaissance a {
+            font-size: clamp(5px, 1vw, 25px);
+        }
+
+        @media screen and (max-width:975px) {
+            .paragraphe {
+                height: 30px;
+            }
+
+            .connaissance ul {
+                padding: 2px;
+                width: 100%;
+            }
+
+            .connaissance ul li {
+                height: 10vh;
+                width: 20%;
+                padding: 5px;
+                margin: 5px;
+                border-radius: 10px;
+            }
+
+            .open-modal2 {
+                height: 7px;
+                font-size: clamp(3px, 2vw, 7px);
+                width: fit-content;
+            }
+
+            .connaissance ul li:hover {
+                border: inset 3px rgba(31, 29, 29, 0.541);
+                width: 22%;
+                background-color: rgba(175, 167, 159, 0.801);
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
         <section class="menu">
-            <a href="#modal1" class="open-modal">Menu</a>
+            <a href="#modal1" class="open-modal">menu</a>
             <div id="modal1" class="modal">
                 <div class="modal-content">
                     <a href="#" class="close">&times;</a>
@@ -150,7 +188,20 @@
                 </div>
             </div>
         </section>
-        <p> Mes compétances informatique </p>
+        <p>
+            Mes compétances informatiques
+        </p>
+        <section class="navbar">
+            <ul>
+                <li> <a href="index.html">Acceuil</a></li>
+                <li><a href="presentation.html">A propos de moi</a></li>
+                <li><a href="parcours.html">Mon parcours académique</a></li>
+                <li><a href="competances.html">Mes competances informatique</a></li>
+                <li><a href="qualités.html">Mes qualités</a></li>
+                <li><a href="certificats.html">Mes certificats et attestations</a></li>
+                <li><a href="contact.html" style="margin-right: 0%;">Contactez-moi</a></li>
+            </ul>
+        </section>
     </header>
     <main>
         <div class="header2">
@@ -166,7 +217,7 @@
                     <div id="modal2" class="modal2">
                         <div class="modal2-content">
                             <h3>HTML</h3>
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <p>HyperText Markup Language, le html est un langage de balisage utilisé pour structurer
                                 les contenus des pages Web.</p>
                         </div>
@@ -179,7 +230,7 @@
                     <div id="modal3" class="modal2">
                         <div class="modal2-content">
                             <h3>CSS</h3>
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <p>Cascading Style Sheets, le CSS est un language de style permettant de mettre en forme
                                 le html.</p>
                         </div>
@@ -191,7 +242,7 @@
                     <a href="#modal4" id="open-modal2">plus</a>
                     <div id="modal4" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>PHP</h3>
                             <p>HyperTex Preprocessor, le PHP est un langage de script côté serveur utilisé pour
                                 générer des pages web dynamiques.</p>
@@ -204,7 +255,7 @@
                     <a href="#modal5" id="open-modal2">plus</a>
                     <div id="modal5" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>SQL</h3>
                             <p>Structured Query Language, le Sql est un langage utilisé pour gérer et interroger les
                                 bases de données relationnelles.</p>
@@ -220,7 +271,7 @@
                     <a href="#modal6" id="open-modal2">plus</a>
                     <div id="modal6" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>Conception d'algorithmes</h3>
                             <p>Conception et structuration de solutions logique à partir de prolèmes concrets.</p>
                         </div>
@@ -232,9 +283,10 @@
                     <a href="#modal7" id="open-modal2">plus</a>
                     <div id="modal7" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>langage C</h3>
-                            <p>Langage de programmation bas niveau, idéal pour comprendre la logique machine et la gestion fine de la mémoire.</p>
+                            <p>Langage de programmation bas niveau, idéal pour comprendre la logique machine et la
+                                gestion fine de la mémoire.</p>
                         </div>
                     </div>
                 </li>
@@ -244,9 +296,10 @@
                     <a href="#modal8" id="open-modal2">plus</a>
                     <div id="modal8" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>Python</h3>
-                            <p>Langage de programmation moderne, interprété et polyvalent apprécié pour sa syntaxe simple et sa lisibilité.</p>
+                            <p>Langage de programmation moderne, interprété et polyvalent apprécié pour sa syntaxe
+                                simple et sa lisibilité.</p>
                         </div>
                     </div>
                 </li>
@@ -259,9 +312,11 @@
                     <a href="#modal9" id="open-modal2">plus</a>
                     <div id="modal9" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>Analyse</h3>
-                            <p>Branche des mathématiques qui étudie les fonctions, les suites, les limites, les dérivé et les integrales permettant de comprendre les variations, la croissance, l'optimisation utiles en algorithmique, traitement du signal ou en intelligence artificielle.</p>
+                            <p>Branche des mathématiques qui étudie les fonctions, les suites, les limites, les dérivé
+                                et les integrales permettant de comprendre les variations, la croissance, l'optimisation
+                                utiles en algorithmique, traitement du signal ou en intelligence artificielle.</p>
                         </div>
                     </div>
                 </li>
@@ -271,9 +326,12 @@
                     <a href="#modal10" id="open-modal2">plus</a>
                     <div id="modal10" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>Algèbre</h3>
-                            <p>Partie des mathématiques qui traite des équations, systèmes linéaires, les matrices, les vecteurs et des opérations symboliques. Elle est très utilisée en informatique pour les structures de données, les graphes, la cryptographie et la programmation scientifique.</p>
+                            <p>Partie des mathématiques qui traite des équations, systèmes linéaires, les matrices, les
+                                vecteurs et des opérations symboliques. Elle est très utilisée en informatique pour les
+                                structures de données, les graphes, la cryptographie et la programmation scientifique.
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -283,9 +341,12 @@
                     <a href="#modal11" id="open-modal2">plus</a>
                     <div id="modal11" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>Notions utiles en informatique</h3>
-                            <p>Ensemble de connaissances fondamentales comme la réprésentation binaire, les bases numériques, la logique booléenne, la conversion entre système de numérotation etc... permerttant de mieux comprendre le fonctionnement des machines, des langages et des systèmes informatiques.</p>
+                            <p>Ensemble de connaissances fondamentales comme la réprésentation binaire, les bases
+                                numériques, la logique booléenne, la conversion entre système de numérotation etc...
+                                permerttant de mieux comprendre le fonctionnement des machines, des langages et des
+                                systèmes informatiques.</p>
                         </div>
                     </div>
                 </li>
@@ -298,9 +359,10 @@
                     <a href="#modal12" id="open-modal2">plus</a>
                     <div id="modal12" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>Word</h3>
-                            <p>logiciel bureautique de traitement de textes utilisé pour rédiger, mettre en forme et structurer des documents.</p>
+                            <p>logiciel bureautique de traitement de textes utilisé pour rédiger, mettre en forme et
+                                structurer des documents.</p>
                         </div>
                     </div>
                 </li>
@@ -310,9 +372,10 @@
                     <a href="#modal13" id="open-modal2">plus</a>
                     <div id="modal13" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>Excel</h3>
-                            <p>Tableur puissant utilisé pour organiser, caluler et analyser des données sous forme de tableaux.</p>
+                            <p>Tableur puissant utilisé pour organiser, caluler et analyser des données sous forme de
+                                tableaux.</p>
                         </div>
                     </div>
                 </li>
@@ -322,9 +385,10 @@
                     <a href="#modal14" id="open-modal2">plus</a>
                     <div id="modal14" class="modal2">
                         <div class="modal2-content">
-                            <a href="#" class="close2">&times;</a>
+                            <a href="#" class="close">&times;</a>
                             <h3>PowerPoint</h3>
-                            <p>Outil de présentation permettant de créer des diaporamas animés avec textes, images,vidéos,graphiques et effets de transitions.</p>
+                            <p>Outil de présentation permettant de créer des diaporamas animés avec textes,
+                                images,vidéos,graphiques et effets de transitions.</p>
                         </div>
                     </div>
                 </li>
