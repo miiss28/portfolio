@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>mon portfolio</title>
   <link rel="stylesheet" href="portfolio.css">
+  
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a84ff">
+<link rel="apple-touch-icon" href="photo11.png">
+
   <style>
     .contenue {
       background-color: rgba(245, 222, 222, 0.5);
@@ -79,5 +84,12 @@
     <p>&copy;FATIME TCHALLOU MOUHYDDINE  |  Etudiante en génie informatique</p>
     <p>Email: <a href="mailto: fatimemouhyddine@gmail.com" style="all: unset; color: rgba(151, 166, 199, 0.678);">fatimemouhyddine@gmail.com</a></p>
   </footer>
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("serviceworker.js");
+    });
+  }
+</script>
 </body>
 </html>
